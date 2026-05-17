@@ -1,0 +1,51 @@
+{
+  "intent_classifier": {
+    "cv_accuracy": 0.9286,
+    "cv_f1": 0.9284,
+    "classes": [
+      "analytics",
+      "classification",
+      "forecasting",
+      "fraud_detection",
+      "general_ml",
+      "nlp",
+      "recommendation",
+      "regression"
+    ],
+    "n_samples": 210
+  },
+  "fraud_detector": {
+    "roc_auc": 1.0,
+    "avg_precision": 0.9997,
+    "f1": 0.9916,
+    "dataset": "credit_card_fraud.csv",
+    "n_train": 15520,
+    "n_test": 2000
+  },
+  "churn_classifier": {
+    "accuracy": 0.7171,
+    "roc_auc": 0.5807,
+    "f1": 0.2667,
+    "dataset": "customer_churn.csv"
+  },
+  "anomaly_detector": {
+    "iso_auc": 1.0,
+    "lof_auc": 0.9524,
+    "ensemble_auc": 1.0,
+    "best_contamination": 0.03,
+    "dataset": "credit_card_fraud.csv"
+  },
+  "house_price_regressor": {
+    "mae": 24948.35,
+    "rmse": 32798.94,
+    "r2": 0.9208,
+    "dataset": "house_prices.csv"
+  },
+  "cancer_classifier": {
+    "rf_auc": 0.997,
+    "svm_auc": 0.9934,
+    "ensemble_auc": 0.9964,
+    "ensemble_f1": 0.9756,
+    "dataset": "breast_cancer.csv"
+  }
+}
