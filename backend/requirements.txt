@@ -13,3 +13,4 @@ pydantic
 joblib
 xgboost
 lightgbm
+chardet
