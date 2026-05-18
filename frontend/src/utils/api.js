@@ -1,16 +1,24 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://YOUR-RENDER-URL.onrender.com",
+  baseURL: "https://dataforge-ai-gzdt.onrender.com",
   timeout: 600000,
 });
 
 export default api;
 
-export const analyzeDataset = async (file, prompt) => {
+// ======================================================
+// ANALYZE DATASET
+// ======================================================
+
+export const analyzeDataset = async (
+  file,
+  prompt
+) => {
   const form = new FormData();
 
   form.append("file", file);
+
   form.append("prompt", prompt);
 
   const { data } = await api.post(
@@ -20,6 +28,10 @@ export const analyzeDataset = async (file, prompt) => {
 
   return data;
 };
+
+// ======================================================
+// PROCESS DATASET
+// ======================================================
 
 export const processDataset = async (
   file,
@@ -50,6 +62,10 @@ export const processDataset = async (
   return data;
 };
 
+// ======================================================
+// RECOMMEND DATASETS
+// ======================================================
+
 export const recommendDatasets = async (
   prompt
 ) => {
@@ -64,6 +80,10 @@ export const recommendDatasets = async (
 
   return data;
 };
+
+// ======================================================
+// DOWNLOAD CLEANED DATA
+// ======================================================
 
 export const getDownloadUrl = (
   file,
@@ -109,6 +129,10 @@ export const getDownloadUrl = (
     URL.revokeObjectURL(url);
   };
 };
+
+// ======================================================
+// SEARCH DATASETS
+// ======================================================
 
 export const searchDatasets = async (
   prompt,
